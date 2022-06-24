@@ -1,0 +1,58 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding-left: 10px;
+
+  .checkbox {
+    cursor: pointer;
+  }
+
+  .todoItem {
+    height: 45px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 10px 0 30px;
+
+    .input-todo-update {
+      height: 100%;
+      width: 90%;
+      font-size: 1.5rem;
+    }
+
+    .overline {
+      text-decoration: line-through;
+    }
+
+    .title {
+      width: 100%;
+      color: #333;
+    }
+
+    &:hover .title {
+      color: #888;
+    }
+  }
+
+  .close {
+    visibility: hidden;
+    display: inline-block;
+    cursor: pointer;
+    color: #ff2400;
+    font-size: 1.5rem;
+    padding-right: 10px;
+
+    &:before {
+      content: '\00d7';
+    }
+    &:hover {
+      color: #cd5c5c;
+    }
+  }
+
+  &:hover .close {
+    visibility: visible;
+  }
+}
